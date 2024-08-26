@@ -4,14 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".notedetailsActivity">
+    tools:context=".notedetailsActivity"
+    android:background="@color/black">
 
 
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:id="@+id/toolbarofnotedetail"
-        android:background="@color/yellow">
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="#D4DACE">
 
         <TextView
             android:layout_width="match_parent"
@@ -24,13 +28,25 @@
 
 
     </androidx.appcompat.widget.Toolbar>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="8dp"
+        android:layout_margin="10dp"
+        android:padding="16dp"
+        android:background="@color/white"
+        android:layout_below="@+id/toolbarofnotedetail">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:textSize="15sp"
         android:gravity="top|left"
         android:background="@color/skyblue"
-        android:layout_below="@+id/toolbarofnotedetail"
         android:textColor="@color/black"
         android:padding="15dp"
         android:id="@+id/contentofnotedetail"/>
@@ -46,4 +62,6 @@
         android:layout_marginBottom="30dp"
         android:src="@drawable/pen"
         android:id="@+id/gotoeditnote" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
 </RelativeLayout>
