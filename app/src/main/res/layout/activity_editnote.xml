@@ -4,19 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".editnoteActivity">
+    tools:context=".editnoteActivity"
+    android:background="@color/black">
 
 
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:id="@+id/toolbarofeditnote"
-        android:background="@color/yellow">
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="#D4DACE">
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingTop="12dp"
+           android:padding="16dp"
             android:textSize="20sp"
             android:hint="Enter Title Here"
             android:textStyle="bold"
@@ -25,6 +29,18 @@
 
     </androidx.appcompat.widget.Toolbar>
 
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="8dp"
+        android:layout_margin="10dp"
+        android:padding="16dp"
+        android:background="@color/white"
+        android:layout_below="@+id/toolbarofeditnote">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
     <EditText
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -32,19 +48,20 @@
         android:gravity="top|left"
         android:hint="Enter Descreption "
         android:background="@color/skyblue"
-        android:layout_below="@+id/toolbarofeditnote"
         android:textColor="@color/black"
         android:padding="15dp"
         android:id="@+id/editcontentofnote"/>
 
-    <ImageView
-        android:layout_width="50dp"
-        android:layout_height="50sp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginBottom="30dp"
-        android:src="@drawable/check"
-        android:id="@+id/saveeditnote"/>
+        <ImageView
+            android:id="@+id/saveeditnote"
+            android:layout_width="50dp"
+            android:layout_height="50sp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/check" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
 </RelativeLayout>
